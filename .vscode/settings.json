@@ -1,0 +1,4 @@
+{
+    "python.workspaceSymbols.tagFilePath": "${workspaceFolder}/env/bin/",
+    "python.pythonPath": "${workspaceFolder}/env/bin/python"
+}
