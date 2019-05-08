@@ -1,14 +1,21 @@
 import cocos
 from cocos.director import director
+import pyglet
 
 class Sprite1(cocos.layer.Layer):
     def __init__(self):
         super().__init__()
 
-        spr = cocos.sprite.Sprite("res/red-blue/140.png")
-        spr.position = 400, 360
+        # spr = cocos.sprite.Sprite("res/red-blue/140.png")
+        # spr.position = 400, 360
+        # self.add(spr)
+        img = pyglet.image.load("res/black_cat.png")
+        img_grid = pyglet.image.ImageGrid(img, 1, 4, item_width=310, item_height=188) #1 row and 4 column, dimension of sprite
+        print(img_grid[0:])
+        anim = pyglet.image.Animation.from_image_sequence(img_grid[0:],0.1,loop=True) #grid, speed, loop
+        spr = cocos.sprite.Sprite(anim)
+        spr.position = 200, 500
         self.add(spr)
-        
 
 class Sprite2(cocos.sprite.Sprite):
     def __init__(self):
