@@ -1,4 +1,4 @@
 {
-    "python.workspaceSymbols.tagFilePath": "${workspaceFolder}/env/bin/",
+    "python.workspaceSymbols.tagFilePath": ".vscode",
     "python.pythonPath": "${workspaceFolder}/env/bin/python"
 }
